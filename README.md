@@ -1,2 +1,2 @@
 # Görüntü İşleme
-OpenCv &amp; C++ İle görüntü işleme
+OpenCv &amp; Java İle görüntü işleme
