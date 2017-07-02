@@ -7,7 +7,7 @@ public class OpenCvFilters {
 		// TODO Auto-generated method stub
 
 		try {
-
+ 
 			System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 			Mat orjImage = Imgcodecs.imread("D:/OpenCvImages/image01.jpg",Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 			Mat newImage = new Mat();
