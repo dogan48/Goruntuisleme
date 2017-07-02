@@ -13,25 +13,25 @@ public class OpenCvFilters {
 			Mat newImage = new Mat();
 			Mat kernel = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(2,2));
 			
-			//Imgproc.erode(orjImage, newImage, kernel);		// Aþýndýrma iþlemi yapýyor...
-			//Imgproc.dilate(orjImage, newImage, kernel);		// Pixelleri geniþletme iþlemi yapýyor...
-			//Imgproc.Canny(orjImage, newImage, 700, 300);		// Resmi siyah beyaza cevirir kenarlarý beyaz diðer yerler siyah
-			//Imgproc.blur(orjImage, newImage, new Size(2,2));	// Resme blur efekti uygular verdiðimiz Size deðerine göre
+			//Imgproc.erode(orjImage, newImage, kernel);		// AÅŸÄ±ndÄ±rma iÅŸlemi yapÄ±yor...
+			//Imgproc.dilate(orjImage, newImage, kernel);		// Pixelleri geniÅŸletme iÅŸlemi yapÄ±yor...
+			//Imgproc.Canny(orjImage, newImage, 700, 300);		// Resmi siyah beyaza cevirir kenarlarÄ± beyaz diÄŸer yerler siyah
+			//Imgproc.blur(orjImage, newImage, new Size(2,2));	// Resme blur efekti uygular verdiÄŸimiz Size deÄŸerine gÃ¶re
 			
-			Imgproc.threshold(orjImage, newImage, 127, 255, Imgproc.THRESH_BINARY);	// Resmin koyu olan yerlerini siyaha
-																					// açýk olan yerlerini beyaza çeker 
-																					//BINARY, BINARY_INV, TOZERO,TOZERO_INV gibi parametreleri var 
-			Core.flip(orjImage, newImage,1);					// Resmi döndürür verilecek deðer >0  <0  ve ==0 olabilir.
+			Imgproc.threshold(orjImage, newImage, 127, 255, Imgproc.THRESH_BINARY);	// Resmin koyu renkli olan yerlerini siyaha
+												// aÃ§Ä±k renkli olan yerlerini beyaza Ã§eker 
+												// BINARY, BINARY_INV, TOZERO,TOZERO_INV gibi parametreleri var 
+			Core.flip(orjImage, newImage,1);					// Resmi dÃ¶ndÃ¼rÃ¼r verilecek deÄŸer >0  <0  ve ==0 olabilir.
 			
 																					
 			
 			
 			Imgcodecs.imwrite("D:/OpenCvImages/image02.jpg", newImage);
-			System.out.println("Ýþlem tamamlandý...");
+			System.out.println("Ä°ÅŸlem tamamlandÄ±...");
 		}
 		catch (Exception e) {
 			
-			System.out.println("Bir hata oluþtu... \n Hata Kodu: "+ e.getMessage());
+			System.out.println("Bir hata oluÅŸtu... \n Hata Kodu: "+ e.getMessage());
 			
 		}
 		
