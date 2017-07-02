@@ -21,6 +21,7 @@ public class OpenCvFilters {
 			Imgproc.threshold(orjImage, newImage, 127, 255, Imgproc.THRESH_BINARY);	// Resmin koyu renkli olan yerlerini siyaha
 												// açık renkli olan yerlerini beyaza çeker 
 												// BINARY, BINARY_INV, TOZERO,TOZERO_INV gibi parametreleri var 
+			
 			Core.flip(orjImage, newImage,1);					// Resmi döndürür verilecek değer >0  <0  ve ==0 olabilir.
 			
 																					
